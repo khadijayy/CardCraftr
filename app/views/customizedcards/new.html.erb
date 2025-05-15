@@ -1,0 +1,16 @@
+<h2>Customize Your Card</h2>
+
+<%= image_tag @template.image %>
+
+<%= form_with url: customized_cards_path(card_template_id: @template.id), method: :post, local: true do %>
+  <%= label_tag :name, "Recipient Name" %>
+  <%= text_field_tag :name %><br><br>
+
+  <%= label_tag :date, "Date" %>
+  <%= text_field_tag :date %><br><br>
+
+  <%= label_tag :message, "Your Message" %>
+  <%= text_area_tag :message %><br><br>
+
+  <%= submit_tag "Generate & Save Card" %>
+<% end %>

@@ -1,0 +1,6 @@
+<% @templates.each do |template| %>
+    <% if template.image.attached? %>
+      <%= image_tag url_for(template.image), alt: template.name %>
+    <% end %>
+  <% end %>
+  

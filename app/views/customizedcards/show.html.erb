@@ -1,0 +1,7 @@
+<h2>Your Final Card</h2>
+<p><strong>Name:</strong> <%= @card.name %></p>
+<p><strong>Date:</strong> <%= @card.date %></p>
+<p><strong>Message:</strong> <%= @card.message %></p>
+
+<%= image_tag @card.final_image %>
+<%= link_to "Download", rails_blob_path(@card.final_image, disposition: "attachment") %>

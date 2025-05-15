@@ -1,0 +1,7 @@
+<h1>Select a Greeting Card Category</h1>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+  <% @categories.each do |category| %>
+    <%= link_to category.name.capitalize, category_templates_path(category.name.downcase), class: "btn btn-primary", style: "padding: 10px 20px; text-decoration: none;" %>
+  <% end %>
+</div>

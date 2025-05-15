@@ -1,0 +1,89 @@
+.auth-wrapper {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-wrapper h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.field-group,
+.field {
+  margin-bottom: 1rem;
+}
+
+.field-group label,
+.field label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.actions {
+  margin-top: 1.2rem;
+}
+
+.signup-button,
+.login-button,
+input[type="submit"] {
+  width: 100%;
+  background-color: #667eea;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-button:hover,
+.login-button:hover,
+input[type="submit"]:hover {
+  background-color: #5a67d8;
+}
+
+.switch-link,
+p {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 14px;
+}
+
+.switch-link a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+
+small, em, i {
+  font-size: 12px;
+  color: #777;
+}

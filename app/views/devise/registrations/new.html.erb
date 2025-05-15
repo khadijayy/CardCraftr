@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag "auth_forms", media: "all" %>
+<%= render "devise/shared/auth_wrapper" do %>
+  <h2>Create your <strong>Card Crafter</strong> account!</h2>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="field-group">
+      <%= f.label :username %>
+      <%= f.text_field :username, autofocus: true %>
+    </div>
+
+    <div class="field-group">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="field-group">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+        <small>(<%= @minimum_password_length %> characters minimum)</small>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field-group">
+      <%= f.label :password_confirmation, "Confirm password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign Up", class: "signup-button" %>
+    </div>
+  <% end %>
+
+  <p class="switch-link">
+    Already have an account? <%= link_to "Login here", new_session_path(resource_name) %>
+  </p>
+<% end %>
