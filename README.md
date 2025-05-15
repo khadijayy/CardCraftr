@@ -13,7 +13,7 @@
   Browse a variety of beautifully designed card templates.
 
 - ✏️ **Click-to-Edit Interface**  
-  Edit templates using an intuitive, user-friendly editor.
+  Edit templates using an intuitive, for admin use only.
 
 - 🗑️ **Template Management**  
   Delete templates you no longer need with a single click.
