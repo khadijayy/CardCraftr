@@ -40,7 +40,7 @@
 
 Built with ❤️ by:
 
-- **Arreba Tahir**  
+- **Areeba Tahir**  
 - **Khadija Subhani**
 
 ---
