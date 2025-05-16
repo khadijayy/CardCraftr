@@ -44,3 +44,9 @@ Built with ❤️ by:
 - **Khadija Subhani**
 
 ---
+## Completed Tasks
+1. User Authentication
+2. Template Selection
+3. Template Customization
+4. Additional Feature Added: Editing Templates (only for admin)
+
