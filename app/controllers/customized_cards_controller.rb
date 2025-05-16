@@ -29,7 +29,7 @@ class CustomizedCardsController < ApplicationController
     name: name,
     date: date,
     message: message,
-    template: @template.id  
+    template: @template
   )
     card.final_image.attach(io: File.open(output_path), filename: "custom_card.jpg")
 
