@@ -47,6 +47,7 @@ class CustomizedCardsController < ApplicationController
   def new
   @template = Template.find(params[:template_id])
   @customized_card = CustomizedCard.new
+  end
 end
 
 def create
@@ -57,5 +58,7 @@ def create
   else
     render :new
   end
-
 end
+
+
+

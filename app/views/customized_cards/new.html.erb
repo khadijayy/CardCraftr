@@ -2,7 +2,8 @@
 
 <%= image_tag @template.image %>
 
-<%= form_with url: customized_cards_path(card_template_id: @template.id), method: :post, local: true do %>
+<%= form_with url: template_customized_cards_path(@template), method: :post, local: true do %>
+
   <%= label_tag :name, "Recipient Name" %>
   <%= text_field_tag :name %><br><br>
 
