@@ -23,13 +23,14 @@ class CustomizedCardsController < ApplicationController
   output_path: output_path.to_s
    )
 
-    # Save customized card in DB
-    card = CustomizedCard.create!(
-      name: name,
-      date: date,
-      message: message,
-      card_template: template
-    )
+  
+   
+  card = CustomizedCard.create!(
+    name: name,
+    date: date,
+    message: message,
+    template: @template.id  
+  )
     card.final_image.attach(io: File.open(output_path), filename: "custom_card.jpg")
 
     redirect_to customized_card_path(card)
@@ -54,6 +55,8 @@ def create
     render :new
   end
 end
+
+
 
 
 
