@@ -1,24 +1,46 @@
-# README
+# 🎴 CardCrafter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**CardCrafter** is a powerful, enterprise-grade web application built using **Ruby on Rails** and **PostgreSQL**. It allows authenticated users to effortlessly create, edit, and manage fully customizable card templates — all from a clean, intuitive interface.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Key Features
 
-* System dependencies
+- 🔐 **Secure User Authentication**  
+  Sign up or log in to manage your card templates safely.
 
-* Configuration
+- 🖼️ **Explore Templates**  
+  Browse a variety of beautifully designed card templates.
 
-* Database creation
+- ✏️ **Click-to-Edit Interface**  
+  Edit templates using an intuitive, for admin use only.
 
-* Database initialization
+- 🗑️ **Template Management**  
+  Delete templates you no longer need with a single click.
 
-* How to run the test suite
+- 🧠 **MVC Architecture**  
+  Built following the robust and scalable Model-View-Controller pattern.
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+## 🧱 Tech Stack
 
-* ...
+| Layer            | Technology                         |
+|------------------|-------------------------------------|
+| **Backend**      | Ruby on Rails                      |
+| **Database**     | PostgreSQL                         |
+| **Frontend**     | Embedded Ruby (ERB), HTML, CSS     |
+| **Authentication** | Devise *(if implemented)*         |
+
+---
+
+
+
+## 👩‍💻 Contributors
+
+Built with ❤️ by:
+
+- **Areeba Tahir**  
+- **Khadija Subhani**
+
+---
