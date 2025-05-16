@@ -17,16 +17,11 @@ class CustomizedCardsController < ApplicationController
 
     full_text = "#{name}\n#{date}\n#{message}"
 
-    ImageEditorService.add_text(
-      image_path: input_path.to_s,
-      text: full_text,
-      output_path: output_path.to_s,
-      options: {
-        gravity: "center",
-        size: 36,
-        color: "white"
-      }
-    )
+   ImageEditorService.add_text(
+  image_path: input_path.to_s,
+  text: full_text,
+  output_path: output_path.to_s
+   )
 
     # Save customized card in DB
     card = CustomizedCard.create!(
