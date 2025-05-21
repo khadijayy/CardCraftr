@@ -1,22 +1,3 @@
-# class TemplatesController < ApplicationController
-#   def index
-#     @category = Category.find_by(name: params[:category].downcase)
-
-#     if @category
-#       @templates = @category.templates.includes(image_attachment: :blob)
-#     else
-#       redirect_to categories_path, alert: "Category not found."
-#     end
-#   end
-  
-#   def template_params
-#     params.require(:template).permit(:name, :category_id, :image)
-#   end
-  
-
-# end
-
-
 class TemplatesController < ApplicationController
   before_action :set_template, only: [:show, :edit, :update, :destroy]
 

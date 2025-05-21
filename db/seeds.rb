@@ -4,7 +4,7 @@ categories.each do |cat_name|
   category = Category.find_or_create_by(name: cat_name)
 
   # Folder where images are stored: tmp/images/birthday/, etc.
-  image_folder = Rails.root.join("tmp/images", cat_name)
+  image_folder = Rails.root.join("db/seed_images", cat_name)
 
   Dir.glob("#{image_folder}/*.{jpg,jpeg,png}").each do |filepath|
     filename = File.basename(filepath)
