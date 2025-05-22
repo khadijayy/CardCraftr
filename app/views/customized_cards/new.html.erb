@@ -1,17 +1,33 @@
 <h2>Customize Your Card</h2>
 
-<%= image_tag @template.image %>
+<div style="display: flex; gap: 20px; align-items: flex-start;">
 
-<%= form_with url: template_customized_cards_path(@template), method: :post, local: true do %>
+  <!-- Template Image Preview -->
+  <div style="flex: 1;">
+    <%= image_tag @template.image, style: "max-width: 100%; height: auto; border: 1px solid #ccc;" %>
+  </div>
 
-  <%= label_tag :name, "Recipient Name" %>
-  <%= text_field_tag :name %><br><br>
+  <!-- Form -->
+  <div style="flex: 1;">
+    <%= form_with url: template_customized_cards_path(@template), method: :post, local: true do %>
+      <div style="margin-bottom: 15px;">
+        <%= label_tag :name, "Recipient Name" %><br>
+        <%= text_field_tag :name, nil, required: true %>
+      </div>
 
-  <%= label_tag :date, "Date" %>
-  <%= text_field_tag :date %><br><br>
+      <div style="margin-bottom: 15px;">
+        <%= label_tag :date, "Date" %><br>
+        <%= text_field_tag :date, nil, required: true %>
+      </div>
 
-  <%= label_tag :message, "Your Message" %>
-  <%= text_area_tag :message %><br><br>
+      <div style="margin-bottom: 15px;">
+        <%= label_tag :message, "Your Message" %><br>
+        <%= text_area_tag :message, nil, rows: 4, required: true %>
+      </div>
 
-  <%= submit_tag "Generate & Save Card" %>
-<% end %>
+      <%= submit_tag "Generate & Save Card", style: "padding: 8px 16px; background-color: #007bff; color: white; border: none;" %>
+    <% end %>
+  </div>
+
+</div>
+

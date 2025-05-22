@@ -3,5 +3,9 @@
 <p><strong>Date:</strong> <%= @card.date %></p>
 <p><strong>Message:</strong> <%= @card.message %></p>
 
-<%= image_tag @card.final_image %>
-<%= link_to "Download", rails_blob_path(@card.final_image, disposition: "attachment") %>
+<div>
+  <%= image_tag @card.final_image, style: "max-width: 100%; height: auto; border: 1px solid #aaa;" %>
+</div>
+
+<br>
+<%= link_to "Download", rails_blob_path(@card.final_image, disposition: "attachment"), class: "btn btn-primary" %>
