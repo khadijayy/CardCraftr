@@ -15,9 +15,6 @@
 - ✏️ **Click-to-Edit Interface**  
   Edit templates using an intuitive, for admin use only.
 
-- 🗑️ **Template Management**  
-  Delete templates you no longer need with a single click.
-
 - 🧠 **MVC Architecture**  
   Built following the robust and scalable Model-View-Controller pattern.
 
