@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_15_164538) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_22_152523) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -58,10 +58,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_15_164538) do
     t.string "name"
     t.string "date"
     t.text "message"
-    t.bigint "card_template_id", null: false
+    t.bigint "template_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["card_template_id"], name: "index_customized_cards_on_card_template_id"
+    t.index ["template_id"], name: "index_customized_cards_on_template_id"
   end
 
   create_table "templates", force: :cascade do |t|
@@ -89,6 +89,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_15_164538) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "customized_cards", "card_templates"
+  add_foreign_key "customized_cards", "templates"
   add_foreign_key "templates", "categories"
 end

@@ -1,6 +1,6 @@
 /* Overall body background */
 body {
-  background: url("/assets/auth_background.jpg") no-repeat center center fixed;
+   background: image-url("auth_background.jpg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
