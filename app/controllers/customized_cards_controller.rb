@@ -37,6 +37,3 @@ class CustomizedCardsController < ApplicationController
   end
 end
 
-
-
-
