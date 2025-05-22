@@ -1,0 +1,114 @@
+/* Overall body background */
+body {
+  background: url("/assets/auth_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Outer wrapper */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Optional decorative ball / image area */
+.auth-glass-ball {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Login/Register/Edit form box */
+.auth-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left;
+}
+
+/* Welcome title */
+.auth-box h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+.auth-box h2 strong {
+  background: linear-gradient(to right, #c37b4d, #5a2b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form fields */
+.field-group {
+  margin-bottom: 20px;
+}
+
+.field-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.field-group input[type="email"],
+.field-group input[type="password"],
+.field-group input[type="text"],
+.field-group input[type="password_confirmation"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Buttons */
+.login-button,
+.signup-button,
+.update-button {
+  background-color: #456472;
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover,
+.signup-button:hover,
+.update-button:hover {
+  background-color: #3b5560;
+}
+
+/* Switch links (e.g. "Need to register?") */
+.switch-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.switch-link a {
+  color: #1b4c4b;
+  text-decoration: none;
+  font-weight: bold;
+}
