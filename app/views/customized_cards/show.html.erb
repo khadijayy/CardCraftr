@@ -3,10 +3,51 @@
 <p><strong>Date:</strong> <%= @card.date %></p>
 <p><strong>Message:</strong> <%= @card.message %></p>
 
+<!-- Event countdown container -->
+<div id="event-countdown" data-event-date="<%= @card.date %>"></div>
+
+<script>
+  document.addEventListener("turbo:load", function () {
+
+    const countdownDiv = document.getElementById("event-countdown");
+    if (countdownDiv) {
+      const eventDateStr = countdownDiv.dataset.eventDate; // e.g. "24/5/2025"
+
+      const parts = eventDateStr.split('/');
+      const eventDate = new Date(parts[2], parts[1] - 1, parts[0]);
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      eventDate.setHours(0, 0, 0, 0);
+
+      const timeDiff = eventDate.getTime() - today.getTime();
+      const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+      let message = "";
+
+      if (daysLeft > 0) {
+        message = `🎉 <strong>${daysLeft} day(s)</strong> are left in your event!`;
+      } else if (daysLeft === 0) {
+        message = "🎉 <strong>Today is your event day!</strong>";
+      } else {
+        message = "⏳ <strong>This event has already passed.</strong>";
+      }
+
+      countdownDiv.innerHTML = `<p style="
+        padding: 10px;
+        background-color: #f0f8ff;
+        border-left: 5px solid #007bff;
+        font-size: 18px;
+        margin-top: 20px;
+        color: #333;
+      ">${message}</p>`;
+    }
+  });
+</script>
+
 <div>
-  <%= image_tag @card.final_image, style: "max-width: 100%; height: auto; border: 1px solid #aaa;" %>
+  <%= image_tag @card.final_image, style: "max-width: 60%; height: auto; border: 1px solid #aaa;" %>
 </div>
 
 <br>
 <%= link_to "Download", rails_blob_path(@card.final_image, disposition: "attachment"), class: "btn btn-primary" %>
-

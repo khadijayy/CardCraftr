@@ -4,7 +4,7 @@
 
   <!-- Template Image Preview -->
   <div style="flex: 1;">
-    <%= image_tag @template.image, style: "max-width: 100%; height: auto; border: 1px solid #ccc;" %>
+    <%= image_tag @template.image, style: "max-width: 60%; height: auto; border: 1px solid #ccc;" %>
   </div>
 
   <!-- Form -->
@@ -25,7 +25,7 @@
         <%= text_area_tag :message, nil, rows: 4, required: true %>
       </div>
 
-      <%= submit_tag "Generate & Save Card", style: "padding: 8px 16px; background-color: #007bff; color: white; border: none;" %>
+      <%= submit_tag "Generate & Save Card", style: "padding: 8px 16px; background-color: ##e8d06f; color: white; border: none;" %>
     <% end %>
   </div>
 

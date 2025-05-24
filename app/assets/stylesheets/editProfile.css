@@ -1,0 +1,97 @@
+/* Main edit profile box styling */
+.edit-profile-box {
+  background-color: white;
+  padding: 50px 40px;
+  border-radius: 18px;
+  max-width: 550px;
+  height: 80vh; /* Makes the box taller but not full screen */
+  overflow-y: auto; /* Enables scrolling if content overflows */
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Heading */
+.edit-profile-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+/* Form Fields */
+.edit-profile-box .field {
+  margin-bottom: 25px;
+}
+
+.edit-profile-box label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #6b6011;
+}
+
+.edit-profile-box input[type="email"],
+.edit-profile-box input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: #f9f9f9;
+}
+
+/* Submit Button */
+.edit-profile-box .actions input[type="submit"] {
+  background-color: #aea311;
+  color: white;
+  font-weight: bold;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.edit-profile-box .actions input[type="submit"]:hover {
+  background-color: #3b5560;
+}
+
+/* Cancel section */
+.edit-profile-box h3 {
+  margin-top: 35px;
+  font-size: 20px;
+  color: #5a2b2b;
+}
+
+.edit-profile-box button {
+   background: linear-gradient(to right, #0f0f0f, #e8d06f);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.edit-profile-box button:hover {
+  background-color: #e8d06f;
+}
+
+/* Back link */
+.edit-profile-box .switch-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.edit-profile-box .switch-link a {
+  color: #1b4c4b;
+  font-weight: bold;
+  text-decoration: none;
+}

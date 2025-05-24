@@ -5,3 +5,88 @@
     <%= link_to category.name.capitalize, category_templates_path(category.name.downcase), class: "btn btn-primary", style: "padding: 10px 20px; text-decoration: none;" %>
   <% end %>
 </div>
+
+
+<style>
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.category-box {
+  padding: 20px 40px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+}
+
+.category-box:hover,
+.category-box:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.category-birthday {
+  background: linear-gradient(to right, #2f2e2e, #e8d06f);
+}
+
+.category-eid {
+  background: linear-gradient(to right, #2f2e2e, #e8d06f);
+}
+
+.category-graduation {
+  background: linear-gradient(to right, #2f2e2e, #e8d06f);
+}
+
+.category-party {
+  background: linear-gradient(to right, #2f2e2e, #e8d06f);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4b0082;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.header-links a {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #4b0082;
+  transition: color 0.3s ease;
+}
+
+.header-links a:hover,
+.header-links a:focus {
+  color: #6a0dad;
+  outline: none;
+}
+
+
+</style>
